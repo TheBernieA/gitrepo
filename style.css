@@ -10,55 +10,62 @@ body {
 
 .container {
   display: flex;
-  height: 100%;
   width: 100%;
-}
-
-aside {
-  width: 25%;
   height: 100%;
-  background: lightgray;
-  padding: 0.5rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: pink;
+  padding: 0.5rem 1rem;
+}
+aside {
+  height: 100%;
+  width: 20%;
+  background: lightgrey;
 }
 
 main {
   position: relative;
-  width: calc(100% - 25%);
+  width: calc(100% - 20%);
   height: 100%;
   background: lightblue;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  background: lightpink;
-  padding: 1rem;
 }
 
 .logo {
   width: 100px;
   height: 30px;
   background: white;
-  margin: 0 auto;
+  margin: 0.5rem auto;
 }
 
 .ball {
   position: absolute;
+  bottom: 2rem;
+  right: 2rem;
   width: 5rem;
   height: 5rem;
-  background: lightgray;
+  background: white;
   border-radius: 50%;
-  bottom: 5rem;
-  right: 5rem;
+}
+.logo-mobile{
+    display: none;
+    width: 100px;
+    height: 30px;
+    background: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   aside {
     display: none;
   }
   main {
     width: 100%;
+  }
+  input{
+    display: none;
+  }
+  .logo-mobile{
+    display: block;
   }
 }
