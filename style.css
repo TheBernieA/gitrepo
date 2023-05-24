@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+aside {
+  width: 25%;
+  height: 100%;
+  background: lightgray;
+  padding: 0.5rem;
+}
+
+main {
+  position: relative;
+  width: calc(100% - 25%);
+  height: 100%;
+  background: lightblue;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background: lightpink;
+  padding: 1rem;
+}
+
+.logo {
+  width: 100px;
+  height: 30px;
+  background: white;
+  margin: 0 auto;
+}
+
+.ball {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background: lightgray;
+  border-radius: 50%;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+@media (max-width: 800px) {
+  aside {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+}
